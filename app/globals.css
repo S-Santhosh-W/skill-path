@@ -53,8 +53,8 @@ body{background:var(--background);color:var(--text)}p{color:var(--text-muted)}
 .officer-dialog:has(.opportunity-wizard){max-width:940px!important;width:calc(100vw - 32px)!important;padding:28px!important}.opportunity-wizard-progress{margin:15px 0 25px}.opportunity-wizard-progress>span{display:block;font-size:12px;color:var(--text-muted);margin-bottom:12px}.opportunity-wizard-layout{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(250px,.8fr);gap:28px}.opportunity-wizard-step{animation:hub-arrive .3s ease both;min-height:300px}.opportunity-wizard-step h2{font-size:23px;margin-bottom:20px;color:var(--text)}.opportunity-wizard-step label{display:grid;gap:8px;margin-bottom:17px;font-size:13px;color:var(--text)}.opportunity-wizard-step p,.opportunity-wizard-step small{font-size:12px;color:var(--text-muted);line-height:1.8}.opportunity-wizard textarea{background:var(--surface);border:1px solid var(--border);color:var(--text);border-radius:10px;padding:12px;min-height:100px;resize:vertical}.opportunity-live-preview{background:var(--surface-secondary);padding:25px;border:1px solid var(--border);border-radius:18px;align-self:start;position:sticky;top:0}.preview-job-icon{display:grid;place-items:center;width:45px;height:45px;border-radius:14px;background:var(--accent);color:var(--primary);margin:20px 0}.opportunity-live-preview h3{font-size:21px;overflow-wrap:anywhere;color:var(--text)}.opportunity-live-preview>p{font-size:13px;line-height:1.7;margin:10px 0;color:var(--text-muted)}.opportunity-live-preview>span:not(.eyebrow){display:flex;gap:5px;align-items:center;font-size:12px;color:var(--text-muted);margin:10px 0}.opportunity-live-preview>small{display:block;color:var(--text-muted);font-size:11px;margin:8px 0}.preview-job-description{white-space:pre-wrap;max-height:150px;overflow:auto}.preview-consent{border-top:1px solid var(--border);padding-top:15px;margin-top:20px;font-size:11px;color:var(--text-muted);display:flex;gap:7px}.opportunity-wizard-actions{display:flex;justify-content:space-between;border-top:1px solid var(--border);padding-top:20px;margin-top:22px}.skill-chip-input{display:flex;gap:8px}.opportunity-skill-chips{display:flex;flex-wrap:wrap;gap:7px;margin:15px 0}.opportunity-skill-chips>button,.opportunity-skill-chips>span{display:flex;align-items:center;gap:7px;padding:6px 9px;border-radius:8px;border:1px solid var(--border);background:var(--accent);font-size:12px;color:var(--primary);animation:hub-arrive .2s ease both}.opportunity-review dl>div{display:grid;grid-template-columns:1fr 1.3fr;gap:12px;padding:10px 0;border-bottom:1px solid var(--border);font-size:13px}.opportunity-review dt{color:var(--text-muted)}.opportunity-review dd{overflow-wrap:anywhere;color:var(--text)}.opportunity-review>p{margin-top:20px;color:var(--text-muted)}.talent-card{animation:hub-arrive .4s ease both;transition:transform .2s,border-color .2s,box-shadow .2s;background:#ffffff!important;border:1px solid #e2e8f0!important;box-shadow:var(--shadow)}.talent-card:hover{transform:translateY(-4px);border-color:var(--primary)!important;box-shadow:0 12px 30px -4px rgba(37,99,235,0.12)!important}
 /* Universal Light Theme Component Rules */
 :is(.app-background,.officer-shell,.officer-main,.officer-content,.landing,.app-main){background:var(--background)!important;color:var(--text)!important}
-:is(.panel,.journey-panel,.resource-card,.resource-filters,.resource-body,.learning-sequence,.hub-recommendation,.career-journey-map,.auth-panel,.company-info,.company-list-card,.talent-card,.officer-stat,.workforce-demand,.officer-feed,.officer-opportunities article,.pipeline-candidate,.candidate-sheet,.candidate-passport,.app-dialog,.officer-dialog,.journey-sheet,.hub-chat,.hub-quiz,.region-overview,.privacy-settings,.opportunity-invitation,.journey-card,.workforce-pipeline,.workforce-pipeline button,.setting,.call-connect,.keypad-panel){background:var(--surface)!important;border-color:var(--border)!important;color:var(--text)!important;box-shadow:var(--shadow)!important}
-:is(.app-topbar,.officer-topbar,.landing-nav,.organization-switch,.officer-sidebar-bottom,.officer-footer){background:var(--glass)!important;border-color:var(--border)!important;color:var(--text)!important}
+:is(.panel,.journey-panel,.resource-card,.resource-filters,.resource-body,.learning-sequence,.hub-recommendation,.auth-panel,.company-info,.company-list-card,.talent-card,.workforce-demand,.officer-feed,.officer-opportunities article,.pipeline-candidate,.candidate-sheet,.candidate-passport,.app-dialog,.officer-dialog,.journey-sheet,.hub-chat,.hub-quiz,.region-overview,.privacy-settings,.opportunity-invitation,.journey-card,.setting,.call-connect,.keypad-panel){background:var(--surface)!important;border-color:var(--border)!important;color:var(--text)!important;box-shadow:var(--shadow)!important}
+:is(.app-topbar,.officer-topbar,.landing-nav,.officer-footer){background:var(--glass)!important;border-color:var(--border)!important;color:var(--text)!important}
 [data-slot=sidebar-wrapper],[data-slot=sidebar-inner],.officer-sidebar{background:#090e1a!important;border-right:1px solid #1e293b!important;color:#f1f5f9!important}
 [data-slot=sidebar-header] .brand{color:#ffffff!important}
 [data-slot=sidebar-header] .brand>svg{color:#38bdf8!important;filter:drop-shadow(0 0 8px rgba(56,189,248,0.5))!important}
@@ -69,7 +69,7 @@ body{background:var(--background);color:var(--text)}p{color:var(--text-muted)}
 .sidebar-note b{color:#ffffff!important}
 .sidebar-note span{color:#94a3b8!important}
 .sidebar-note>svg{color:#38bdf8!important}
-:is(.hub-header,.digital-passport-card,.livelihood-transition,.progress-coach,.resource-art,.journey-intro,.journey-status){background:linear-gradient(130deg,#eff6ff,#f8fafc)!important;border-color:var(--border)!important;color:var(--text)!important}
+:is(.hub-header,.progress-coach,.resource-art,.journey-intro,.journey-status){background:linear-gradient(130deg,#eff6ff,#f8fafc)!important;border-color:var(--border)!important;color:var(--text)!important}
 :is(h1,h2,h3,h4,legend,.section-title,.breadcrumb b,.officer-page-heading h1,.candidate-evidence b,.talent-card h3,.resource-body h3,.passport-card-metrics b,.stage-icon,.candidate-requirements b){color:var(--text)!important}
 :is(p,small,.muted,.source-label,.fine-print,.candidate-location,.hub-note,.resource-meta,.resource-price small,.resource-status>span,.provider-badge,.time-budget,.hub-breadcrumb,.hub-outcomes p,.milestone-label p,.milestone-label span,.milestone p,.officer-edition,.notice-kind,.discovery-meta,.readiness-factors span,.readiness-factors small,.readiness-policy,.readiness-next p,.activity-legend,.growth-empty p,.passport-card-header,.digital-passport-card>small,.passport-card-metrics span,.growth-insight,.talent-card-bottom,.talent-card-bottom span,.opportunity-footer,.demand-footer,.career-journey-heading p,.career-readiness-ring em,.career-readiness-ring span,.hub-progress small,.hub-progress span,.company-detail p,.company-detail small){color:var(--text-muted)!important}
 :is(input,select,textarea,.resource-search,.talent-search,.top-search,.resource-status select,.hub-badges span,.resource-chips button,.talent-skill-tags span,.passport-card-tags span,.tags span,.stage-hover,.module-hub select,.career-journey-dashboard select,.candidate-evidence,.candidate-requirements>div,.notification-item,.setting,.opportunity,.mini-project,.journey-target,.readiness-next,.sequence-track button span,.resource-open,.organization-switch,.theme-switcher){background:var(--surface)!important;color:var(--text)!important;border-color:var(--border)!important}
@@ -163,11 +163,114 @@ body{background:var(--background);color:var(--text)}p{color:var(--text-muted)}
 .notification-item>span{background:#eff6ff!important;border:1px solid #bfdbfe!important;color:#2563eb!important}
 .officer-welcome>svg,.officer-access-denied>svg{background:#eff6ff!important;border:1px solid #bfdbfe!important;color:#2563eb!important}
 .schematic-map,.real-map{background:#f8fafc!important;border:1px solid #cbd5e1!important}
-.officer-stat{background:#ffffff!important;border-right:1px solid #e2e8f0!important;color:var(--text)!important}
-.officer-stat strong{color:var(--text)!important}
-.officer-stat>span{color:#64748b!important}
-.officer-overview-grid .workforce-demand,.officer-overview-grid .officer-feed{background:#ffffff!important;border:1px solid #e2e8f0!important}
-.officer-stats{background:#ffffff!important;border:1px solid #e2e8f0!important}
+.officer-stats{background:#ffffff!important;border:1px solid #e2e8f0!important;border-radius:12px!important;box-shadow:0 4px 20px -2px rgba(15,23,42,0.05)!important;overflow:hidden!important}
+.officer-stat{background:#ffffff!important;border-right:1px solid #e2e8f0!important;color:var(--text)!important;transition:background .2s}
+.officer-stat:hover{background:#f8fafc!important}
+.officer-stat>span{color:#475569!important;font-size:7px!important;letter-spacing:.8px!important;font-weight:600!important}
+.officer-stat>strong{color:#0f172a!important;font-weight:600!important}
+.officer-stat>small{color:#64748b!important}
+.officer-stat.violet svg{color:#7c3aed!important}
+.officer-stat.teal svg{color:#059669!important}
+.officer-stat.blue svg{color:#2563eb!important}
+.officer-stat.amber svg{color:#d97706!important}
+.workforce-pipeline{background:#ffffff!important;border:1px solid #e2e8f0!important;border-radius:16px!important;box-shadow:var(--shadow)!important;padding:24px!important;margin:26px 0}
+.workforce-pipeline>div:last-child{display:grid;grid-template-columns:repeat(9,minmax(90px,1fr));gap:1px;overflow:auto;background:#e2e8f0!important;border-radius:10px!important}
+.workforce-pipeline button{background:#ffffff!important;color:#0f172a!important;transition:background .18s!important}
+.workforce-pipeline button:hover{background:#eff6ff!important}
+.workforce-pipeline button b{color:#0f172a!important;font-weight:600!important}
+.workforce-pipeline button span{color:#475569!important}
+.workforce-pipeline button svg{color:#2563eb!important}
+.workforce-demand,.officer-feed{background:#ffffff!important;border:1px solid #e2e8f0!important;border-radius:12px!important;box-shadow:var(--shadow)!important}
+.demand-bars>button{color:#334155!important}
+.demand-bars>button>div{background:#e2e8f0!important}
+.demand-bars i{background:linear-gradient(90deg,#2563eb,#38bdf8)!important}
+.demand-bars strong{color:#0f172a!important;font-weight:600!important}
+.demand-footer{border-top:1px solid #e2e8f0!important;color:#64748b!important}
+.demand-footer i{background:#059669!important}
+.workforce-analytics .journey-panel{background:#ffffff!important;border:1px solid #e2e8f0!important;box-shadow:var(--shadow)!important}
+.supply-legend{color:#64748b!important}
+.supply-legend span:first-child i{background:#2563eb!important}
+.supply-legend span:last-child i{background:#059669!important}
+.supply-row>span{color:#0f172a!important;font-weight:500!important}
+.supply-row>div{background:#e2e8f0!important}
+.supply-row i:first-child{background:#2563eb!important}
+.supply-row i:last-child{background:#059669!important}
+.supply-row small{color:#64748b!important}
+.placement-panel>b{color:#059669!important}
+.placement-panel>p{color:#64748b!important}
+.placement-panel>div{border-bottom:1px solid #e2e8f0!important;color:#475569!important}
+.placement-panel>div strong{color:#0f172a!important}
+.organization-switch{background:rgba(15,23,42,0.85)!important;border:1px solid #1e293b!important;color:#f8fafc!important}
+.organization-switch small{color:#64748b!important}
+.officer-sidebar-bottom{color:#94a3b8!important;border-top:1px solid #1e293b!important}
+.officer-sidebar-bottom a{color:#94a3b8!important;border-top:1px solid #1e293b!important}
+.officer-sidebar-bottom a:hover{color:#38bdf8!important}
+.officer-primary{background:linear-gradient(110deg,#1d4ed8,#2563eb)!important;color:#ffffff!important;border:1px solid #3b82f6!important;box-shadow:0 4px 14px rgba(37,99,235,0.28)!important}
+.career-journey-map{position:relative;background:radial-gradient(ellipse at 50% 15%,#111e3b 0%,#060b18 100%)!important;border:1px solid #1e293b!important;border-radius:22px!important;padding:35px 20px 20px!important;color:#f8fafc!important;box-shadow:0 12px 35px -5px rgba(0,0,0,0.25)!important;overflow:hidden}
+.journey-map-stars{opacity:.55!important}
+.career-journey-line path{stroke:rgba(96,165,250,0.25)!important}
+.career-journey-line .journey-line-flow{stroke:#38bdf8!important;opacity:.95!important}
+.stage-icon{background:#090e1a!important;border:1px solid #334155!important;box-shadow:0 0 0 7px #060b18!important;color:#94a3b8!important}
+.career-stage-nodes .done .stage-icon{background:#064e3b!important;border-color:#10b981!important;color:#34d399!important;box-shadow:0 0 18px rgba(16,185,129,0.35),0 0 0 7px #060b18!important}
+.career-stage-nodes .current .stage-icon{background:#1e3a8a!important;border-color:#3b82f6!important;color:#60a5fa!important;box-shadow:0 0 25px rgba(59,130,246,0.6),0 0 0 7px #060b18!important}
+.career-stage-nodes .current .stage-halo{border-color:rgba(59,130,246,0.6)!important}
+.career-stage-nodes b{color:#ffffff!important}
+.career-stage-nodes small{color:#94a3b8!important}
+.career-stage-nodes .future b{color:#64748b!important}
+.career-stage-nodes .future small{color:#475569!important}
+.journey-map-caption{border-top:1px solid #1e293b!important;color:#94a3b8!important}
+.journey-map-caption>span{color:#38bdf8!important}
+.journey-map-caption i{background:#38bdf8!important;box-shadow:0 0 9px #38bdf8!important}
+.stage-hover{background:#090e1a!important;border:1px solid #334155!important;color:#f8fafc!important;box-shadow:0 12px 30px rgba(0,0,0,0.6)!important}
+.journey-target{background:#ffffff!important;border:1px solid #cbd5e1!important;color:#0f172a!important;box-shadow:var(--shadow)!important}
+.journey-target b{color:#0f172a!important}
+.journey-target span{color:#64748b!important}
+.journey-target>svg:first-child{color:#2563eb!important}
+.readiness-panel{background:#ffffff!important;border:1px solid #e2e8f0!important;box-shadow:var(--shadow)!important}
+.career-readiness-ring circle.readiness-track{stroke:#e2e8f0!important}
+.career-readiness-ring circle.readiness-value{stroke:#2563eb!important}
+.career-readiness-ring.is-ready circle.readiness-value{stroke:#059669!important}
+.career-readiness-ring span{color:#64748b!important}
+.career-readiness-ring b{color:#0f172a!important}
+.career-readiness-ring b small{color:#64748b!important}
+.career-readiness-ring em{color:#475569!important}
+.factor-track{background:#e2e8f0!important}
+.factor-track i{background:linear-gradient(90deg,#2563eb,#38bdf8)!important}
+.readiness-factors b{color:#0f172a!important}
+.readiness-factors span{color:#475569!important}
+.readiness-next{background:#f8fafc!important;border:1px solid #e2e8f0!important;color:#0f172a!important}
+.readiness-next p{color:#334155!important}
+.readiness-next>svg{color:#2563eb!important}
+.readiness-next button{color:#2563eb!important}
+.digital-passport-card{position:relative;background:radial-gradient(ellipse at right top,rgba(37,99,235,0.25),transparent 70%),linear-gradient(145deg,#090e1a 0%,#17233d 100%)!important;border:1px solid #1e293b!important;border-radius:20px!important;color:#ffffff!important;box-shadow:0 15px 40px -10px rgba(15,23,42,0.25)!important}
+.passport-card-header{color:#94a3b8!important}
+.digital-passport-card .eyebrow{color:#60a5fa!important}
+.digital-passport-card h2{color:#ffffff!important}
+.digital-passport-card>p{color:#cbd5e1!important}
+.passport-card-chip{color:#34d399!important;background:rgba(16,185,129,0.12)!important;border:1px solid rgba(16,185,129,0.3)!important;border-radius:20px!important;padding:4px 10px!important}
+.passport-card-metrics{border-top:1px solid #1e293b!important;border-bottom:1px solid #1e293b!important}
+.passport-card-metrics b{color:#ffffff!important}
+.passport-card-metrics span{color:#94a3b8!important}
+.passport-card-tags span{background:rgba(30,41,59,0.85)!important;border:1px solid #334155!important;color:#e2e8f0!important}
+.digital-passport-card>small{color:#64748b!important}
+.digital-passport-card>button{background:linear-gradient(110deg,#1d4ed8,#2563eb)!important;color:#ffffff!important;border:1px solid #3b82f6!important;font-weight:550!important}
+.livelihood-transition{background:linear-gradient(110deg,#090e1a 0%,#1e293b 100%)!important;border:1px solid #334155!important;border-radius:22px!important;color:#ffffff!important;box-shadow:0 10px 30px -5px rgba(15,23,42,0.2)!important}
+.livelihood-transition p{color:#cbd5e1!important}
+.livelihood-transition>div>span{color:#f8fafc!important}
+.livelihood-transition>div>span svg{color:#38bdf8!important}
+.livelihood-transition>button{background:#2563eb!important;color:#ffffff!important;border:1px solid #3b82f6!important}
+.activity-squares>div{background:#e2e8f0!important;border:1px solid #cbd5e1!important}
+.activity-squares .activity-level-1{background:#93c5fd!important;border-color:#60a5fa!important}
+.activity-squares .activity-level-2{background:#3b82f6!important;border-color:#2563eb!important}
+.activity-squares .activity-level-3{background:#1d4ed8!important;border-color:#1e40af!important}
+.activity-legend{color:#64748b!important}
+.activity-legend i{background:#e2e8f0!important}
+.activity-legend i:nth-child(2){background:#3b82f6!important}
+.activity-legend i:nth-child(3){background:#1d4ed8!important}
+.achievement-timeline>div>span,.achievement-timeline>button>span{background:#eff6ff!important;border:1px solid #bfdbfe!important;color:#2563eb!important}
+.achievement-timeline b{color:#0f172a!important}
+.achievement-timeline p{color:#475569!important}
+.achievement-timeline small{color:#64748b!important}
 .donut{background:conic-gradient(#2563eb var(--value),#e2e8f0 0)!important}
 .donut:before{background:#ffffff!important}
 .donut b{color:#0f172a!important}
