@@ -1,0 +1,41 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1790575567636,
+      "tag": "0000_jazzy_matthew_murdock",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1790578056042,
+      "tag": "0001_big_glorian",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1790578971503,
+      "tag": "0002_freezing_sunset_bain",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1790607919488,
+      "tag": "0003_mighty_vulcan",
+      "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "6",
+      "when": 1790661174614,
+      "tag": "0004_narrow_preak",
+      "breakpoints": true
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+'use client';
+import {createContext,useContext,useEffect,useState} from 'react';
+import {ThemeProvider} from 'next-themes';
+import {Locale,validLocale} from './locales';
+import {translate} from './translate';
+const Context=createContext({language:'en' as Locale,setLanguage:(v:Locale)=>{},t:(s:string)=>s,recent:[] as string[]});
+export function usePreferences(){return useContext(Context)}
+export function T({children}:{children:string}){return <>{usePreferences().t(children)}</>}
+export default function AppPreferences({children}:{children:React.ReactNode}){const [language,setLocale]=useState<Locale>('en'),[recent,setRecent]=useState<string[]>([]);useEffect(()=>{const local=localStorage.getItem('skillpath-language');if(local&&validLocale(local))setLocale(local);try{setRecent(JSON.parse(localStorage.getItem('skillpath-recent-languages')||'[]'))}catch{}fetch('/api/preferences').then(r=>r.ok?r.json():null).then((p:any)=>{if(p?.language&&validLocale(p.language))setLocale(p.language);if(p?.theme&&localStorage.getItem('skillpath-theme')!==p.theme){localStorage.setItem('skillpath-theme',p.theme);window.dispatchEvent(new CustomEvent('skillpath-theme-sync',{detail:p.theme}))}}).catch(()=>{})},[]);useEffect(()=>{document.documentElement.lang=language;document.documentElement.dir=language==='ur'?'rtl':'ltr';localStorage.setItem('skillpath-language',language)},[language]);function setLanguage(v:Locale){setLocale(v);const list=[v,...recent.filter(l=>l!==v)].slice(0,4);setRecent(list);localStorage.setItem('skillpath-recent-languages',JSON.stringify(list));fetch('/api/preferences',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({language:v})}).catch(()=>{})}return <Context.Provider value={{language,setLanguage,t:s=>translate(language,s),recent}}><ThemeProvider attribute="class" defaultTheme="system" enableSystem storageKey="skillpath-theme" disableTransitionOnChange>{children}</ThemeProvider></Context.Provider>}

@@ -1,0 +1,2 @@
+export async function request(path:string,body?:unknown){const res=await fetch(path,{method:body?'POST':'GET',headers:body?{'Content-Type':'application/json'}:undefined,body:body?JSON.stringify(body):undefined});const result:any=await res.json();if(res.status===401&&typeof window!=='undefined'&&window.location.pathname!=='/auth')window.location.assign('/auth');if(!res.ok)throw new Error(result.error||'Request failed');return result}
+export const save=(action:string,value?:unknown)=>request('/api/state',{action,value});

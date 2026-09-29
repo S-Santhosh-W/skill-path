@@ -1,0 +1,6 @@
+import {z} from 'zod';
+import {identity,sameOrigin,fail} from '@/server/middleware/auth';
+import {database} from '@/server/services/db';
+import {validLocale} from '@/src/i18n/locales';
+export async function GET(){try{const u=await identity(),p=await database().prepare('SELECT language,theme FROM user_preferences WHERE user_id=?').bind(u.userId).first();return Response.json(p||{language:'en',theme:'system'},{headers:{'Cache-Control':'no-store'}})}catch(e){return fail(e)}}
+export async function POST(req:Request){try{sameOrigin(req);const u=await identity(),v=z.object({language:z.string().refine(validLocale).optional(),theme:z.enum(['light','dark','system']).optional()}).parse(await req.json()),db=database();await db.prepare('INSERT OR IGNORE INTO user_preferences(user_id) VALUES(?)').bind(u.userId).run();const q=[];if(v.language)q.push(db.prepare('UPDATE user_preferences SET language=? WHERE user_id=?').bind(v.language,u.userId),db.prepare('UPDATE profiles SET preferred_language=? WHERE user_id=?').bind(v.language,u.userId));if(v.theme)q.push(db.prepare('UPDATE user_preferences SET theme=? WHERE user_id=?').bind(v.theme,u.userId));if(q.length)await db.batch(q);return Response.json({ok:true})}catch(e){if(e instanceof z.ZodError)return Response.json({error:'Check your preference.'},{status:400});return fail(e)}}

@@ -1,0 +1,4 @@
+export type ResourceType='video'|'course'|'pdf'|'documentation'|'article'|'practice'|'project'|'github'|'certification';
+export type Resource={id:string;moduleId:string;title:string;description:string;provider:string;url:string;thumbnail:string|null;resourceType:ResourceType;pricingType:'free'|'paid';price:string|null;rating:number|null;reviewCount:number|null;difficulty:'Beginner'|'Intermediate'|'Advanced';duration:number|null;language:string;certificate:boolean|null;verified:boolean;source:string;publishedAt:string|null;instructor:string|null;reason?:string;status?:string;saved?:boolean};
+export const languages:Record<string,string>={en:'English',ta:'Tamil',hi:'Hindi',te:'Telugu',ml:'Malayalam',kn:'Kannada'};
+export const steps=['Learn the concept','Watch a lesson','Read the documentation','Practice the skill','Build a mini project'];

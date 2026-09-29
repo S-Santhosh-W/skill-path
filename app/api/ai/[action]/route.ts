@@ -1,0 +1,3 @@
+import {invokeAI,AIAction} from '@/server/ai/provider';
+import {identity,sameOrigin,fail} from '@/server/middleware/auth';
+export async function POST(req:Request,{params}:{params:Promise<{action:string}>}){try{await identity();sameOrigin(req);const {action}=await params;if(!['chat','career','skill-gap','analyze-call','voice'].includes(action))return Response.json({error:'Unknown action'},{status:404});const text=await req.text();if(text.length>12000)return Response.json({error:'Request too large'},{status:413});const body=JSON.parse(text);return Response.json(await invokeAI(action as AIAction,body))}catch(e){return fail(e)}}

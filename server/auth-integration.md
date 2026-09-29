@@ -1,0 +1,7 @@
+# Authentication boundary
+
+This Sites edition uses platform-owned authentication. `server/middleware/auth.ts` resolves the trusted per-site user identity; every private query is scoped to this ID. Local sign-in uses the starter's loopback-only mock middleware, never the production worker. It removes caller-supplied identity headers before injecting local test identity.
+
+Google OAuth is intentionally not represented as working. The sign-in screen explains that Google is unconfigured. Sites' documented auth path does not support scaffolding external app-owned OAuth without platform confirmation. Before enabling Google, confirm external identity support on the target host. Then implement an adapter supplying the same identity shape; do not trust client-submitted Google IDs.
+
+For a standalone compatible host: use OpenID Connect authorization-code flow with PKCE, state, nonce, server token exchange, verified issuer/audience/expiry/nonce, Secure HttpOnly SameSite=Lax sessions, session rotation and revocation. Request only `openid email profile`. Store `sub` as google_id, never use an email as the stable identity key. Keep the client secret server-side. Restrict redirect URIs to exact configured origins. Use Google's supported library instead of writing token signature verification manually. Map consent for optional information separately. Never turn the demo button into an authentication bypass.
